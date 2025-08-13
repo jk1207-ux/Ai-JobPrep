@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChatGPT for Job Seekers — AI JobPrep</title>
+  <meta name="description" content="Use ChatGPT to write resumes and cover letters, message recruiters, and practice interview answers with the STAR method." />
+  <!-- Match the techy theme used on the How It Works / AI for Beginners pages -->
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1400&q=75">
+  <style>
+    :root{
+      --bg: #0b1020;
+      --bg-grad-1:#183075;
+      --bg-grad-2:#2b1e78;
+      --text:#e6eefc;
+      --muted:#b8c4e6;
+      --brand:#4f7cff;
+      --brand-2:#7b5cff;
+      --line: rgba(255,255,255,.16);
+      --shadow: 0 20px 40px rgba(0,0,0,.35);
+      --radius: 14px;
+      --radius-lg: 18px;
+      --maxw: 1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial;
+      background:
+        radial-gradient(900px 420px at 10% -10%, rgba(123,92,255,.18), transparent 60%),
+        radial-gradient(700px 360px at 90% 0%, rgba(79,124,255,.16), transparent 60%),
+        linear-gradient(180deg, #0a0f21 0%, var(--bg) 70%);
+      color:var(--text); line-height:1.65
+    }
+    a{color:inherit; text-decoration:none}
+
+    /* Header (same as site) */
+    header{position:sticky; top:0; z-index:50; backdrop-filter: blur(8px); background:rgba(10,15,33,.55); border-bottom:1px solid var(--line); padding:16px 24px; display:flex; justify-content:space-between; align-items:center}
+    .brand{display:flex; align-items:center; gap:10px}
+    .brand h1{font-size:20px; margin:0}
+    .cta{padding:10px 16px; background:linear-gradient(135deg, var(--brand), var(--brand-2)); border:none; border-radius:10px; font-weight:800; color:#fff; box-shadow:var(--shadow)}
+
+    main{max-width:var(--maxw); margin:auto; padding:36px 20px}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center}
+    .eyebrow{display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size:12px; letter-spacing:.2px; background:rgba(79,124,255,.12); border:1px solid var(--line)}
+    .headline{font-size:2.2rem; margin:.3rem 0}
+    .lead{color:var(--muted)}
+
+    /* Media with skeleton shimmer to ensure visible load */
+    .media{position:relative; border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow); border:1px solid var(--line)}
+    .media::before{content:""; position:absolute; inset:0; animation: shimmer 1.1s linear infinite; background: linear-gradient(90deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.10) 50%, rgba(255,255,255,.04) 100%); transform: translateX(-100%)}
+    .media img{display:block; width:100%; height:auto}
+    .media.loaded::before{display:none}
+    @keyframes shimmer{to{transform:translateX(100%)}}
+
+    /* Content grid */
+    .section{margin-top:28px}
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+    .card{background:rgba(255,255,255,.04); border:1px solid var(--line); border-radius:12px; padding:16px}
+    .card h3{margin:6px 0}
+    ul{margin:0; padding-left:18px}
+
+    /* Second image row */
+    .image-row{display:grid; grid-template-columns:1fr; gap:16px; margin-top:22px}
+    .image-row .media{aspect-ratio: 16/9}
+
+    /* Responsive */
+    @media(max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true">
+        <defs>
+          <linearGradient id="ajpG" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0" stop-color="#4f7cff"/>
+            <stop offset="1" stop-color="#7b5cff"/>
+          </linearGradient>
+        </defs>
+        <rect rx="20" ry="20" width="100" height="100" fill="url(#ajpG)"/>
+        <path d="M70 38 L45 63 L33 51" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h1>AI JobPrep</h1>
+    </div>
+    <a class="cta" href="courses.html">Back to Courses</a>
+  </header>
+
+  <main>
+    <!-- Split hero -->
+    <section class="hero">
+      <div>
+        <span class="eyebrow">JOB SEARCH • 1 WEEK</span>
+        <h1 class="headline">ChatGPT for Job Seekers</h1>
+        <p class="lead">Use ChatGPT to write strong resumes and cover letters, message recruiters with confidence, and practice interview answers using the STAR method.</p>
+      </div>
+      <figure class="media" id="heroMedia">
+        <img
+          src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1400&q=75"
+          srcset="
+            https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=70 800w,
+            https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=72 1200w,
+            https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1400&q=75 1400w"
+          sizes="(max-width: 980px) 100vw, 520px"
+          alt="Writing a resume with AI help"
+          width="1400" height="933" loading="eager" fetchpriority="high" decoding="async"/>
+      </figure>
+    </section>
+
+    <!-- Course details -->
+    <section class="grid section">
+      <article class="card">
+        <h3>What you'll learn</h3>
+        <ul>
+          <li>Resume prompts that highlight your wins</li>
+          <li>Cover letter prompts tailored to each job</li>
+          <li>LinkedIn profile tune‑up with the right keywords</li>
+          <li>Outreach and follow‑up messages that get replies</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Who this is for</h3>
+        <ul>
+          <li>Entry‑level applicants</li>
+          <li>Career switchers</li>
+          <li>People returning to the workforce</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="grid section">
+      <article class="card">
+        <h3>Modules</h3>
+        <ul>
+          <li>Resume Builder with AI</li>
+          <li>Cover Letter in 10 Minutes</li>
+          <li>LinkedIn Keyword Tuning</li>
+          <li>Recruiter Outreach & Follow‑up</li>
+          <li>Interview Q&A Coach (STAR)</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>You'll build</h3>
+        <ul>
+          <li>Job‑ready resume + cover letter</li>
+          <li>Updated LinkedIn profile</li>
+          <li>Interview prep sheet</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Second image -->
+    <section class="image-row section">
+      <figure class="media" id="supportMedia">
+        <img
+          src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1400&q=75"
+          srcset="
+            https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=800&q=70 800w,
+            https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1200&q=72 1200w,
+            https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1400&q=75 1400w"
+          sizes="(max-width: 980px) 100vw, 1000px"
+          alt="Practicing interview answers with notes"
+          width="1400" height="933" loading="lazy" decoding="async"/>
+      </figure>
+    </section>
+  </main>
+
+  <script>
+    // Remove shimmer once images decode
+    const heroWrap = document.getElementById('heroMedia');
+    const heroImg = heroWrap.querySelector('img');
+    (heroImg.decode ? heroImg.decode() : Promise.resolve()).finally(()=> heroWrap.classList.add('loaded'));
+
+    const supportWrap = document.getElementById('supportMedia');
+    if (supportWrap) {
+      const supportImg = supportWrap.querySelector('img');
+      (supportImg.decode ? supportImg.decode() : Promise.resolve()).finally(()=> supportWrap.classList.add('loaded'));
+    }
+  </script>
+</body>
+</html>

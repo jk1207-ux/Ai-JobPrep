@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Start Learning Free — AI JobPrep</title>
+  <meta name="description" content="Create your free AI JobPrep account. Get the intro module, sample prompts, and a weekly job‑search checklist. No credit card required." />
+  <style>
+    :root{
+      --bg:#0b1020; --bg1:#183075; --bg2:#2b1e78; --text:#e6eefc; --muted:#b8c4e6; --brand:#4f7cff; --brand-2:#7b5cff; --accent:#b7ff4d; --line:rgba(255,255,255,.16);
+      --shadow:0 20px 40px rgba(0,0,0,.35); --radius:16px; --radius-lg:22px; --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;background:
+      radial-gradient(900px 420px at 10% -10%, rgba(123,92,255,.18), transparent 60%),
+      radial-gradient(700px 360px at 90% 0%, rgba(79,124,255,.16), transparent 60%),
+      linear-gradient(180deg, #0a0f21 0%, var(--bg) 70%);
+      color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+
+    /* Header */
+    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);background:rgba(10,15,33,.55);border-bottom:1px solid var(--line)}
+    .nav{max-width:var(--maxw);margin:auto;padding:14px 24px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand img{height:32px;width:32px;border-radius:8px}
+    .brand h1{margin:0;font-size:18px}
+    .links{display:flex;gap:16px}
+
+    main{max-width:var(--maxw);margin:auto;padding:40px 20px}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:center}
+    .eyebrow{display:inline-block;padding:6px 10px;border-radius:999px;font:12px ui-monospace,monospace;background:rgba(79,124,255,.12);border:1px solid var(--line)}
+    .headline{font-size:2.4rem;margin:.4rem 0}
+    .lead{color:var(--muted)}
+
+    /* Card */
+    .card{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:var(--radius-lg);padding:18px;box-shadow:var(--shadow)}
+
+    /* Form */
+    form{display:grid;gap:12px;margin-top:6px}
+    label{font-weight:600}
+    input,select,textarea{width:100%;padding:12px 12px;border-radius:12px;border:1px solid var(--line);background:#0f1735;color:var(--text)}
+    input::placeholder,textarea::placeholder{color:#9fb0d7}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .hint{color:var(--muted);font-size:.95rem}
+    .cta{position:relative;padding:12px 18px;background:linear-gradient(135deg,var(--brand),var(--brand-2));border:none;border-radius:12px;font-weight:800;color:#fff;box-shadow:var(--shadow);cursor:pointer}
+    .small{font-size:.9rem;color:var(--muted)}
+
+    /* What you get */
+    .benefits{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .benefit{display:flex;gap:10px;align-items:flex-start;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:14px}
+    .benefit .icon{height:34px;width:34px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--brand),var(--brand-2))}
+
+    /* Steps */
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:step}
+    .step{position:relative;background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:14px}
+    .step::before{counter-increment:step;content:counter(step);position:absolute;top:-10px;left:-10px;height:30px;width:30px;border-radius:50%;display:grid;place-items:center;background:var(--brand);color:#fff;font-weight:800}
+
+    /* FAQ */
+    details{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:12px}
+    summary{cursor:pointer;font-weight:700}
+
+    /* Responsive */
+    @media(max-width:980px){.hero{grid-template-columns:1fr}.row,.benefits,.steps{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <img src="logo.png" alt="AI JobPrep logo" onerror="this.outerHTML='\u003csvg width=\'32\' height=\'32\' viewBox=\'0 0 100 100\' aria-hidden=\'true\'\u003e\u003cdefs\u003e\u003clinearGradient id=\'g\' x1=\'0\' x2=\'1\' y1=\'0\' y2=\'1\'\u003e\u003cstop offset=\'0\' stop-color=\'#4f7cff\'\/\u003e\u003cstop offset=\'1\' stop-color=\'#7b5cff\'\/\u003e\u003c/linearGradient\u003e\u003c/defs\u003e\u003crect rx=\'20\' ry=\'20\' width=\'100\' height=\'100\' fill=\'url(#g)\'\/\u003e\u003cpath d=\'M70 38 L45 63 L33 51\' fill=\'none\' stroke=\'#fff\' stroke-width=\'10\' stroke-linecap=\'round\' stroke-linejoin=\'round\'\/\u003e\u003c/svg\u003e'">
+        <h1>AI JobPrep</h1>
+      </a>
+      <nav class="links"><a href="how-it-works.html">How it works</a><a href="courses.html">Courses</a><a href="pricing.html">Pricing</a><a href="stories.html">Stories</a></nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero + signup -->
+    <section class="hero">
+      <div>
+        <span class="eyebrow">FREE INTRO</span>
+        <h1 class="headline">Start learning free</h1>
+        <p class="lead">Get the intro module, sample prompts, and a weekly job‑search checklist. Learn the basics fast — no credit card needed.</p>
+
+        <div class="card benefits" aria-label="What you get">
+          <div class="benefit"><div class="icon">🎬</div><div><b>Intro module</b><br><span class="small">Short videos that explain AI in plain words.</span></div></div>
+          <div class="benefit"><div class="icon">📝</div><div><b>Prompt pack</b><br><span class="small">Ready‑to‑use prompts for resumes & cover letters.</span></div></div>
+          <div class="benefit"><div class="icon">✅</div><div><b>Weekly checklist</b><br><span class="small">A simple plan for your job search.</span></div></div>
+          <div class="benefit"><div class="icon">🧰</div><div><b>Tool setup</b><br><span class="small">Safe settings for ChatGPT and LinkedIn.</span></div></div>
+        </div>
+      </div>
+
+      <aside class="card" aria-label="Create your free account">
+        <h2 style="margin:0 0 6px">Create your free account</h2>
+        <p class="hint" style="margin:0 0 12px">Takes less than a minute. We’ll email your access link.</p>
+        <form id="startForm">
+          <div class="row">
+            <div><label for="first">First name</label><input id="first" name="first" placeholder="Jane" required></div>
+            <div><label for="last">Last name</label><input id="last" name="last" placeholder="Doe" required></div>
+          </div>
+          <div><label for="email">Email</label><input id="email" type="email" name="email" placeholder="you@example.com" required></div>
+          <div class="row">
+            <div>
+              <label for="role">I am a…</label>
+              <select id="role" name="role" required>
+                <option value="" disabled selected>Choose one</option>
+                <option>Student or recent grad</option>
+                <option>Career switcher</option>
+                <option>Returning to work</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="track">Interest area</label>
+              <select id="track" name="track">
+                <option>General</option>
+                <option>Marketing</option>
+                <option>Admin/Operations</option>
+                <option>Customer Support</option>
+              </select>
+            </div>
+          </div>
+          <label for="goal">Your goal (optional)</label>
+          <textarea id="goal" name="goal" rows="3" placeholder="E.g., Get an entry‑level marketing job in 2 months"></textarea>
+          <label style="display:flex; gap:10px;align-items:flex-start"><input type="checkbox" required style="margin-top:4px">I agree to receive the intro module by email. You can unsubscribe anytime.</label>
+          <button class="cta" type="submit">Get my free access link</button>
+          <div class="small">No credit card needed • Private & secure</div>
+        </form>
+      </aside>
+    </section>
+
+    <!-- How it works mini -->
+    <section style="margin-top:24px">
+      <div class="card" style="padding:16px">
+        <h3 style="margin:0 0 10px">What happens next?</h3>
+        <div class="steps">
+          <div class="step"><b>Check your inbox</b><br><span class="small">We’ll send an access link within a minute.</span></div>
+          <div class="step"><b>Open the dashboard</b><br><span class="small">Start the intro module and download your prompts.</span></div>
+          <div class="step"><b>Finish Day 1</b><br><span class="small">Make your first AI‑assisted resume bullet in 10 minutes.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section style="margin-top:24px;display:grid;gap:12px">
+      <details>
+        <summary>Is this really free?</summary>
+        <div class="small">Yes. You get the intro module, prompt pack, and checklist for free. You can upgrade anytime for full access.</div>
+      </details>
+      <details>
+        <summary>Do I need to know how to code?</summary>
+        <div class="small">No. Everything is taught in plain language with step‑by‑step examples.</div>
+      </details>
+      <details>
+        <summary>Will this help with my resume and LinkedIn?</summary>
+        <div class="small">Yes. The prompt pack and videos show you how to write stronger bullet points and tune your profile keywords.</div>
+      </details>
+    </section>
+  </main>
+
+  <script>
+    // Demo submit handler — replace with your real endpoint
+    document.getElementById('startForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const btn = this.querySelector('button[type="submit"]');
+      btn.disabled = true; btn.textContent = 'Sending…';
+      setTimeout(() => {
+        btn.textContent = 'Access link sent! Check your email';
+        btn.style.background = 'linear-gradient(135deg, #32d583, #12b76a)';
+      }, 900);
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Career Plus — AI JobPrep</title>
+  <meta name="description" content="Career Plus: everything in Pro plus 1-on-1 resume feedback and a personalized interview plan. Schedule a video call or send a message to get started." />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <style>
+    :root{ --bg:#0b1020; --bg1:#183075; --bg2:#2b1e78; --text:#e6eefc; --muted:#b8c4e6; --brand:#4f7cff; --brand-2:#7b5cff; --accent:#b7ff4d; --line:rgba(255,255,255,.16); --shadow:0 20px 40px rgba(0,0,0,.35); --radius:16px; --radius-lg:22px; --maxw:1100px }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;
+      background:
+        radial-gradient(900px 420px at 10% -10%, rgba(123,92,255,.18), transparent 60%),
+        radial-gradient(700px 360px at 90% 0%, rgba(79,124,255,.16), transparent 60%),
+        linear-gradient(180deg, #0a0f21 0%, var(--bg) 70%);
+      color:var(--text); line-height:1.65
+    }
+    a{color:inherit; text-decoration:none}
+
+    /* Header */
+    header{position:sticky; top:0; z-index:50; backdrop-filter:blur(8px); background:rgba(10,15,33,.55); border-bottom:1px solid var(--line)}
+    .nav{max-width:var(--maxw); margin:auto; padding:14px 24px; display:flex; justify-content:space-between; align-items:center; gap:12px}
+    .brand{display:flex; align-items:center; gap:10px}
+    .brand img{height:32px; width:32px; border-radius:8px}
+    .brand h1{margin:0; font-size:18px}
+    .links{display:flex; gap:16px}
+
+    /* Layout */
+    main{max-width:var(--maxw); margin:auto; padding:40px 20px}
+    .grid{display:grid; grid-template-columns:1.05fr .95fr; gap:22px; align-items:start}
+    .hero-noimg{grid-template-columns:1fr;} /* make hero full-width when image is removed */
+    .card{background:rgba(255,255,255,.05); border:1px solid var(--line); border-radius:var(--radius-lg); padding:18px; box-shadow:var(--shadow)}
+    .pill{display:inline-block; padding:6px 10px; border-radius:999px; font:12px ui-monospace,monospace; background:rgba(79,124,255,.12); border:1px solid var(--line)}
+    .headline{font-size:2.25rem; margin:.3rem 0}
+    .lead{color:var(--muted)}
+    .list{margin:10px 0 0; padding-left:18px}
+
+    /* Media (still used later on page) */
+    .media{position:relative; border-radius:16px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow); background:#0f1735}
+    .media::before{content:""; position:absolute; inset:0; animation: shimmer 1.1s linear infinite; background: linear-gradient(90deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.10) 50%, rgba(255,255,255,.04) 100%); transform: translateX(-100%)}
+    .media img{display:block; width:100%; height:auto}
+    .media.loaded::before{display:none}
+    @keyframes shimmer{to{transform:translateX(100%)}}
+
+    /* Secondary blocks */
+    .two-col{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:20px}
+    .badge{display:inline-block; font-weight:800; padding:6px 10px; border-radius:10px; background:linear-gradient(135deg, var(--brand), var(--brand-2))}
+
+    /* CTA */
+    .cta{padding:12px 18px; background:linear-gradient(135deg, var(--brand), var(--brand-2)); color:#fff; border-radius:12px; font-weight:800; display:inline-block}
+    .cta.secondary{background:transparent; outline:1px solid var(--line)}
+
+    /* Forms */
+    .form-row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    label{font-weight:700}
+    input, select, textarea{width:100%; padding:12px; border-radius:12px; border:1px solid var(--line); background:#0f1735; color:var(--text)}
+    input::placeholder, textarea::placeholder{color:#9fb0d7}
+    .small{font-size:.92rem; color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .grid{grid-template-columns:1fr}
+      .two-col{grid-template-columns:1fr}
+      .form-row{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <img src="logo.png" alt="AI JobPrep logo" onerror="this.outerHTML='<svg width=\'32\' height=\'32\' viewBox=\'0 0 100 100\' aria-hidden=\'true\'><defs><linearGradient id=\'g\' x1=\'0\' x2=\'1\' y1=\'0\' y2=\'1\'><stop offset=\'0\' stop-color=\'#4f7cff\'/><stop offset=\'1\' stop-color=\'#7b5cff\'/></linearGradient></defs><rect rx=\'20\' ry=\'20\' width=\'100\' height=\'100\' fill=\'url(#g)\'/><path d=\'M70 38 L45 63 L33 51\' fill=\'none\' stroke=\'#fff\' stroke-width=\'10\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/></svg>'">
+        <h1>AI JobPrep</h1>
+      </a>
+      <nav class="links">
+        <a href="how-it-works.html">How it works</a>
+        <a href="courses.html">Courses</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="stories.html">Stories</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero (image removed) -->
+    <section class="grid hero-noimg" aria-labelledby="title">
+      <div>
+        <span class="pill">PLAN</span>
+        <h1 id="title" class="headline">Career Plus</h1>
+        <p class="lead">Everything in Pro, plus <strong>1-on-1 resume feedback</strong> and a <strong>personalized interview plan</strong>. Get guided help to land faster.</p>
+        <div class="card" style="margin-top:10px">
+          <div class="badge" aria-label="Price">$149</div>
+          <ul class="list">
+            <li>Everything in Pro</li>
+            <li>1-on-1 resume feedback (expert review)</li>
+            <li>Personalized interview plan for your target role</li>
+          </ul>
+          <div style="display:flex; gap:10px; margin-top:12px; flex-wrap:wrap">
+            <a class="cta" href="#schedule">Schedule a video call</a>
+            <a class="cta secondary" href="#contact">Send a message</a>
+            <a class="cta secondary" href="pricing.html">See all plans</a>
+          </div>
+          <div class="small" style="margin-top:8px">Response within 1 business day • Private & secure</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What you get + second image (kept) -->
+    <section class="two-col" style="margin-top:22px">
+      <div class="card">
+        <h2 style="margin:0 0 6px">What you get</h2>
+        <ul class="list">
+          <li>Deep review of your resume with clear edits and example bullet points</li>
+          <li>Keyword tune-up for your target roles and ATS checks</li>
+          <li>Mock interview questions matched to your role</li>
+          <li>Personalized 2-week prep schedule and checklists</li>
+          <li>Email templates for follow-ups and referrals</li>
+        </ul>
+      </div>
+      <figure class="media" id="supportMedia">
+        <img
+          src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1200&q=75"
+          srcset="
+            https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=800&q=70 800w,
+            https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1200&q=75 1200w"
+          sizes="(max-width: 980px) 100vw, 520px"
+          alt="Resume review: hands editing resume and notes"
+          width="1200" height="800" loading="lazy" decoding="async"
+        />
+      </figure>
+    </section>
+
+    <!-- Is this for me? + How to get started -->
+    <section class="two-col">
+      <div class="card">
+        <h2 style="margin:0 0 6px">Is this for me?</h2>
+        <ul class="list">
+          <li>You want personal feedback, not just templates</li>
+          <li>You have interviews coming up and need a plan</li>
+          <li>You’re switching roles and need help telling your story</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2 style="margin:0 0 6px">How to get started</h2>
+        <ol class="list" style="margin:0">
+          <li>Pick a time below for a 25-minute video call</li>
+          <li>Or send a message and we’ll suggest times</li>
+          <li>Get your edited resume and interview plan in days</li>
+        </ol>
+        <div class="small" style="margin-top:8px">Prefer email? <a href="mailto:hello@aijobprep.com?subject=Career%20Plus%20Inquiry">hello@aijobprep.com</a></div>
+      </div>
+    </section>
+
+    <!-- Scheduler -->
+    <section id="schedule" class="two-col" style="margin-top:22px">
+      <div class="card">
+        <h2 style="margin:0 0 6px">Schedule a face-cam meeting</h2>
+        <p class="small" style="margin:0 0 10px">Choose a date and time that works. We’ll generate a calendar invite and email you the video link.</p>
+        <form id="schedForm" style="display:grid; gap:12px">
+          <div class="form-row">
+            <div>
+              <label for="sName">Full name</label>
+              <input id="sName" name="name" placeholder="Jane Doe" required>
+            </div>
+            <div>
+              <label for="sEmail">Email</label>
+              <input id="sEmail" name="email" type="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="sDate">Date</label>
+              <input id="sDate" type="date" required>
+            </div>
+            <div>
+              <label for="sTime">Time</label>
+              <input id="sTime" type="time" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="sPlatform">Video platform</label>
+              <select id="sPlatform">
+                <option>Google Meet</option>
+                <option>Zoom</option>
+                <option>Microsoft Teams</option>
+              </select>
+            </div>
+            <div>
+              <label for="sDuration">Duration</label>
+              <select id="sDuration">
+                <option value="25">25 minutes</option>
+                <option value="40">40 minutes</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="sNotes">Notes (optional)</label>
+            <textarea id="sNotes" rows="3" placeholder="Share your goals or target role"></textarea>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap">
+            <button class="cta" type="submit">Add to Google Calendar</button>
+            <button class="cta secondary" id="icsBtn" type="button">Download .ics</button>
+            <a class="cta secondary" id="mailBtn" href="#">Email us your booking</a>
+          </div>
+          <div class="small">Times shown use your local timezone (<span id="tzLabel"></span>).</div>
+        </form>
+      </div>
+      <div class="card">
+        <h2 style="margin:0 0 6px">What happens after</h2>
+        <ul class="list">
+          <li>We confirm your time and send the meeting link</li>
+          <li>You’ll receive a short checklist to prepare</li>
+          <li>Optional: share your resume for pre-review</li>
+        </ul>
+        <div class="small" style="margin-top:8px">Need another option? <a href="#contact">Send a message</a> instead.</div>
+      </div>
+    </section>
+
+    <!-- Contact form -->
+    <section id="contact" class="two-col" style="margin-top:22px">
+      <div class="card">
+        <h2 style="margin:0 0 6px">Send a message</h2>
+        <p class="small" style="margin:0 0 10px">Tell us a bit about your goals. We’ll reply within one business day.</p>
+        <form id="cpForm" style="display:grid; gap:12px">
+          <div class="form-row">
+            <div>
+              <label for="name">Full name</label>
+              <input id="name" name="name" placeholder="Jane Doe" required>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div>
+              <label for="role">Target role</label>
+              <input id="role" name="role" placeholder="e.g., Marketing Coordinator">
+            </div>
+            <div>
+              <label for="timeline">Timeline</label>
+              <select id="timeline" name="timeline">
+                <option>ASAP</option>
+                <option>Within 2 weeks</option>
+                <option>Within a month</option>
+                <option>Exploring options</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="message">What do you need help with?</label>
+            <textarea id="message" name="message" rows="4" placeholder="Briefly describe your situation (resume rewrite, interview prep, career switch, etc.)"></textarea>
+          </div>
+          <button class="cta" type="submit">Send message</button>
+          <div class="small">No spam • We never share your info</div>
+        </form>
+      </div>
+      <div class="card">
+        <h2 style="margin:0 0 6px">Response time</h2>
+        <ul class="list">
+          <li>Messages: under 1 business day</li>
+          <li>Scheduling: instant calendar add, link by email</li>
+          <li>Deliverables: 2–3 days after the call</li>
+        </ul>
+        <div class="small" style="margin-top:8px">Questions? Email <a href="mailto:hello@aijobprep.com">hello@aijobprep.com</a></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Turn off shimmer once the remaining image decodes
+    const supportWrap = document.getElementById('supportMedia');
+    if (supportWrap) {
+      const img = supportWrap.querySelector('img');
+      (img.decode ? img.decode() : Promise.resolve()).finally(()=> supportWrap.classList.add('loaded'));
+    }
+
+    // Utils
+    const pad = n => String(n).padStart(2,'0');
+    function toICS(d){
+      return d.getUTCFullYear()+pad(d.getUTCMonth()+1)+pad(d.getUTCDate())+'T'+pad(d.getUTCHours())+pad(d.getUTCMinutes())+pad(d.getUTCSeconds())+'Z';
+    }
+
+    // Timezone label
+    const tzLabel = document.getElementById('tzLabel');
+    if (tzLabel) tzLabel.textContent = Intl.DateTimeFormat().resolvedOptions().timeZone || 'local time';
+
+    // Scheduler
+    const schedForm = document.getElementById('schedForm');
+    const mailBtn = document.getElementById('mailBtn');
+    const icsBtn  = document.getElementById('icsBtn');
+
+    schedForm.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const name = document.getElementById('sName').value.trim();
+      const email = document.getElementById('sEmail').value.trim();
+      const date = document.getElementById('sDate').value; // YYYY-MM-DD
+      const time = document.getElementById('sTime').value; // HH:MM
+      const platform = document.getElementById('sPlatform').value;
+      const duration = parseInt(document.getElementById('sDuration').value,10) || 25;
+      const notes = document.getElementById('sNotes').value.trim();
+      if(!name || !email || !date || !time){ alert('Please fill name, email, date, and time.'); return; }
+
+      // Build start/end in local, convert to UTC for link
+      const startLocal = new Date(`${date}T${time}`);
+      const endLocal = new Date(startLocal.getTime() + duration*60000);
+
+      const text = encodeURIComponent('Career Plus Consultation');
+      const details = encodeURIComponent(`Video: ${platform}\nName: ${name}\nEmail: ${email}\nNotes: ${notes||'N/A'}\nWe\'ll email the video link.`);
+      const location = encodeURIComponent(`${platform} (link sent by email)`);
+      const dates = `${toICS(startLocal)}/${toICS(endLocal)}`;
+      const gcal = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${text}&dates=${dates}&details=${details}&location=${location}`;
+
+      window.open(gcal,'_blank');
+    });
+
+    // Download ICS
+    icsBtn.addEventListener('click', ()=>{
+      const name = document.getElementById('sName').value.trim();
+      const email = document.getElementById('sEmail').value.trim();
+      const date = document.getElementById('sDate').value;
+      const time = document.getElementById('sTime').value;
+      const platform = document.getElementById('sPlatform').value;
+      const duration = parseInt(document.getElementById('sDuration').value,10) || 25;
+      const notes = document.getElementById('sNotes').value.trim();
+      if(!name || !email || !date || !time){ alert('Please fill name, email, date, and time.'); return; }
+      const startLocal = new Date(`${date}T${time}`);
+      const endLocal = new Date(startLocal.getTime() + duration*60000);
+
+      const ics = [
+        'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//AI JobPrep//Career Plus//EN',
+        'BEGIN:VEVENT',
+        `UID:${Date.now()}@aijobprep.com`,
+        `DTSTAMP:${toICS(new Date())}`,
+        `DTSTART:${toICS(startLocal)}`,
+        `DTEND:${toICS(endLocal)}`,
+        'SUMMARY:Career Plus Consultation',
+        `DESCRIPTION:Video: ${platform}\\nName: ${name} \\nEmail: ${email} \\nNotes: ${notes||'N/A'} \\nWe will email the video link.`,
+        `LOCATION:${platform} (link by email)`,
+        'END:VEVENT','END:VCALENDAR'
+      ].join('\r\n');
+      const blob = new Blob([ics], {type:'text/calendar'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'career-plus-consultation.ics';
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(()=>URL.revokeObjectURL(url), 1000);
+    });
+
+    // Prefilled email
+    mailBtn.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const name = document.getElementById('sName').value.trim();
+      const email = document.getElementById('sEmail').value.trim();
+      const date = document.getElementById('sDate').value;
+      const time = document.getElementById('sTime').value;
+      const platform = document.getElementById('sPlatform').value;
+      const duration = document.getElementById('sDuration').value;
+      const notes = encodeURIComponent(document.getElementById('sNotes').value.trim());
+      const subject = encodeURIComponent('Career Plus — Video call request');
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPreferred time: ${date} ${time}\nDuration: ${duration} minutes\nPlatform: ${platform}\nNotes: ${decodeURIComponent(notes)}`);
+      window.location.href = `mailto:hello@aijobprep.com?subject=${subject}&body=${body}`;
+    });
+
+    // Contact form demo
+    const form = document.getElementById('cpForm');
+    form?.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true; btn.textContent = 'Sending…';
+      setTimeout(()=>{ btn.textContent = 'Message sent! We\'ll reply soon'; }, 900);
+    });
+  </script>
+</body>
+</html>

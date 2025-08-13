@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pro Bootcamp — AI JobPrep</title>
+  <meta name="description" content="Go pro with AI JobPrep. Get all modules and templates, the Resume & LinkedIn pack, and interview coach prompts. Learn practical AI skills fast." />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <style>
+    :root{
+      --bg:#0b1020; --bg1:#183075; --bg2:#2b1e78; --text:#e6eefc; --muted:#b8c4e6; --brand:#4f7cff; --brand-2:#7b5cff; --accent:#b7ff4d; --line:rgba(255,255,255,.16);
+      --shadow:0 20px 40px rgba(0,0,0,.35); --radius:16px; --radius-lg:22px; --maxw:1100px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial; background:
+      radial-gradient(900px 420px at 10% -10%, rgba(123,92,255,.18), transparent 60%),
+      radial-gradient(700px 360px at 90% 0%, rgba(79,124,255,.16), transparent 60%),
+      linear-gradient(180deg, #0a0f21 0%, var(--bg) 70%);
+      color:var(--text); line-height:1.65}
+    a{color:inherit; text-decoration:none}
+
+    /* Header */
+    header{position:sticky; top:0; z-index:50; backdrop-filter:blur(8px); background:rgba(10,15,33,.55); border-bottom:1px solid var(--line)}
+    .nav{max-width:var(--maxw); margin:auto; padding:14px 24px; display:flex; justify-content:space-between; align-items:center; gap:12px}
+    .brand{display:flex; align-items:center; gap:10px}
+    .brand img{height:32px; width:32px; border-radius:8px}
+    .brand h1{margin:0; font-size:18px}
+    .links{display:flex; gap:16px}
+
+    main{max-width:var(--maxw); margin:auto; padding:40px 20px}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns:1.05fr .95fr; gap:24px; align-items:start}
+    .eyebrow{display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px; font:12px ui-monospace,monospace; background:rgba(79,124,255,.12); border:1px solid var(--line)}
+    .headline{font-size:2.4rem; margin:.4rem 0}
+    .lead{color:var(--muted)}
+    .price{font-weight:900; font-size:1.6rem; margin:8px 0 0}
+    .cta{position:relative; padding:12px 18px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); border:none; border-radius:12px; font-weight:800; color:#fff; box-shadow:var(--shadow); cursor:pointer}
+    .cta.secondary{background:transparent; outline:1px solid var(--line)}
+
+    .media{position:relative; border-radius:16px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow); background:#0f1735}
+    .media img{display:block; width:100%; height:auto}
+
+    /* Info cards */
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:22px}
+    .card{background:rgba(255,255,255,.05); border:1px solid var(--line); border-radius:14px; padding:16px}
+    .card h3{margin:6px 0}
+    ul{margin:0; padding-left:18px}
+
+    /* Curriculum */
+    .section{margin-top:30px}
+    .modules{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+    .module{background:rgba(255,255,255,.04); border:1px solid var(--line); border-radius:14px; padding:14px}
+
+    /* Second image row */
+    .image-row{display:grid; grid-template-columns:1fr; gap:16px; margin-top:22px}
+    .image-row .media{aspect-ratio:16/9}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .grid,.modules{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <a class="brand" href="index.html">
+        <img src="logo.png" alt="AI JobPrep logo" onerror="this.outerHTML='\u003csvg width=\'32\' height=\'32\' viewBox=\'0 0 100 100\' aria-hidden=\'true\'\u003e\u003cdefs\u003e\u003clinearGradient id=\'g\' x1=\'0\' x2=\'1\' y1=\'0\' y2=\'1\'\u003e\u003cstop offset=\'0\' stop-color=\'#4f7cff\'\/\u003e\u003cstop offset=\'1\' stop-color=\'#7b5cff\'\/\u003e\u003c/linearGradient\u003e\u003c/defs\u003e\u003crect rx=\'20\' ry=\'20\' width=\'100\' height=\'100\' fill=\'url(#g)\'\/\u003e\u003cpath d=\'M70 38 L45 63 L33 51\' fill=\'none\' stroke=\'#fff\' stroke-width=\'10\' stroke-linecap=\'round\' stroke-linejoin=\'round\'\/\u003e\u003c/svg\u003e'">
+        <h1>AI JobPrep</h1>
+      </a>
+      <nav class="links">
+        <a href="how-it-works.html">How it works</a>
+        <a href="courses.html">Courses</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="stories.html">Stories</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <span class="eyebrow">MOST POPULAR • PRO</span>
+        <h1 class="headline">Pro Bootcamp</h1>
+        <p class="price">$79</p>
+        <p class="lead">Everything you need to run a smart job search with AI. Learn by doing, write stronger resumes, and practice interviews with guided prompts.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>What you get</h3>
+            <ul>
+              <li>All modules & templates</li>
+              <li>Resume & LinkedIn pack</li>
+              <li>Interview coach prompts</li>
+              <li>Job‑search trackers & outreach scripts</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Who it's for</h3>
+            <ul>
+              <li>Students & career switchers</li>
+              <li>Admins, CS, marketing, ops roles</li>
+              <li>Anyone who wants a clear plan</li>
+            </ul>
+          </div>
+        </div>
+        <div style="display:flex; gap:12px; margin-top:16px; flex-wrap:wrap">
+          <a class="cta" href="pricing.html">Get Pro</a>
+          <a class="cta secondary" href="#curriculum">View curriculum</a>
+        </div>
+      </div>
+      <figure class="media">
+        <img
+          src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1400&q=75"
+          srcset="
+            https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&q=70 800w,
+            https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=75 1200w"
+          sizes="(max-width: 980px) 100vw, 520px"
+          alt="Person working at a laptop with notes and phone"
+          width="1400" height="933" loading="eager" fetchpriority="high" decoding="async" />
+      </figure>
+    </section>
+
+    <!-- What's inside -->
+    <section class="section">
+      <div class="grid">
+        <article class="card">
+          <h3>You'll learn</h3>
+          <ul>
+            <li>Prompting for resumes, cover letters, and outreach</li>
+            <li>Turning job posts into tailored bullet points</li>
+            <li>Portfolio mini‑projects that show your skills</li>
+            <li>Interview practice with feedback and scorecards</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>You'll build</h3>
+          <ul>
+            <li>AI‑enhanced resume & LinkedIn profile</li>
+            <li>Prompt pack you can reuse</li>
+            <li>Job search tracker with weekly plan</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Curriculum -->
+    <section id="curriculum" class="section">
+      <h2 style="margin:0 0 10px">Curriculum</h2>
+      <div class="modules">
+        <div class="module"><b>Module 1</b> — AI basics, safe use & setup</div>
+        <div class="module"><b>Module 2</b> — Prompting 101 (resume, cover, outreach)</div>
+        <div class="module"><b>Module 3</b> — Smart job search: mapping roles & keywords</div>
+        <div class="module"><b>Module 4</b> — Interview coach: behavioral & role‑specific</div>
+        <div class="module"><b>Module 5</b> — Portfolio mini‑project & share plan</div>
+        <div class="module"><b>Module 6</b> — First‑week toolkit: notes, emails, task planning</div>
+      </div>
+    </section>
+
+    <!-- Second image -->
+    <section class="image-row section">
+      <figure class="media">
+        <img
+          src="https://images.unsplash.com/photo-1516387938699-a93567ec168e?auto=format&fit=crop&w=1400&q=75"
+          srcset="
+            https://images.unsplash.com/photo-1516387938699-a93567ec168e?auto=format&fit=crop&w=800&q=70 800w,
+            https://images.unsplash.com/photo-1516387938699-a93567ec168e?auto=format&fit=crop&w=1200&q=75 1200w"
+          sizes="(max-width: 980px) 100vw, 1000px"
+          alt="Team planning board with sticky notes and diagrams"
+          width="1400" height="933" loading="lazy" decoding="async" />
+      </figure>
+    </section>
+  </main>
+</body>
+</html>

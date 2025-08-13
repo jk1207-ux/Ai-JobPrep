@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Productivity Toolkit — AI JobPrep</title>
+  <meta name="description" content="Automate busywork and save hours each week using safe, practical AI tools." />
+  <!-- Match the techy theme used on the other pages -->
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=75">
+  <style>
+    :root{
+      --bg: #0b1020; --text:#e6eefc; --muted:#b8c4e6; --brand:#4f7cff; --brand-2:#7b5cff; --line: rgba(255,255,255,.16);
+      --shadow: 0 20px 40px rgba(0,0,0,.35); --radius: 14px; --radius-lg: 18px; --maxw: 1100px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial;
+      background: radial-gradient(900px 420px at 10% -10%, rgba(123,92,255,.18), transparent 60%),
+                  radial-gradient(700px 360px at 90% 0%, rgba(79,124,255,.16), transparent 60%),
+                  linear-gradient(180deg, #0a0f21 0%, #0b1020 70%);
+      color:var(--text); line-height:1.65 }
+    a{color:inherit; text-decoration:none}
+
+    /* Header */
+    header{position:sticky; top:0; z-index:50; backdrop-filter: blur(8px); background:rgba(10,15,33,.55); border-bottom:1px solid var(--line); padding:16px 24px; display:flex; justify-content:space-between; align-items:center}
+    .brand{display:flex; align-items:center; gap:10px}
+    .brand h1{font-size:20px; margin:0}
+    .cta{padding:10px 16px; background:linear-gradient(135deg, var(--brand), var(--brand-2)); border:none; border-radius:10px; font-weight:800; color:#fff; box-shadow:var(--shadow)}
+
+    main{max-width:var(--maxw); margin:auto; padding:36px 20px}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center}
+    .eyebrow{display:inline-flex; gap:8px; align-items:center; padding:6px 10px; border-radius:999px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size:12px; letter-spacing:.2px; background:rgba(79,124,255,.12); border:1px solid var(--line)}
+    .headline{font-size:2.2rem; margin:.3rem 0}
+    .lead{color:var(--muted)}
+
+    /* Media with shimmer */
+    .media{position:relative; border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow); border:1px solid var(--line)}
+    .media::before{content:""; position:absolute; inset:0; animation: shimmer 1.1s linear infinite; background: linear-gradient(90deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.10) 50%, rgba(255,255,255,.04) 100%); transform: translateX(-100%)}
+    .media img{display:block; width:100%; height:auto}
+    .media.loaded::before{display:none}
+    @keyframes shimmer{to{transform:translateX(100%)}}
+
+    /* Content grid */
+    .section{margin-top:28px}
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+    .card{background:rgba(255,255,255,.04); border:1px solid var(--line); border-radius:12px; padding:16px}
+    .card h3{margin:6px 0}
+    ul{margin:0; padding-left:18px}
+
+    /* Second image */
+    .image-row{display:grid; grid-template-columns:1fr; gap:16px; margin-top:22px}
+    .image-row .media{aspect-ratio: 16/9}
+
+    /* Responsive */
+    @media(max-width:980px){ .hero{grid-template-columns:1fr} .grid{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true">
+        <defs><linearGradient id="ajpG3" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#4f7cff"/><stop offset="1" stop-color="#7b5cff"/></linearGradient></defs>
+        <rect rx="20" ry="20" width="100" height="100" fill="url(#ajpG3)"/>
+        <path d="M70 38 L45 63 L33 51" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h1>AI JobPrep</h1>
+    </div>
+    <a class="cta" href="courses.html">Back to Courses</a>
+  </header>
+
+  <main>
+    <!-- Split hero -->
+    <section class="hero">
+      <div>
+        <span class="eyebrow">PRODUCTIVITY • 1–2 WEEKS</span>
+        <h1 class="headline">AI Productivity Toolkit</h1>
+        <p class="lead">Automate busywork and save hours each week using safe, practical AI tools. Learn the simple workflows that speed up writing, research, and task planning.</p>
+      </div>
+      <figure class="media" id="heroMedia">
+        <img
+          src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=75"
+          srcset="
+            https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=70 800w,
+            https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=72 1200w,
+            https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1400&q=75 1400w"
+          sizes="(max-width: 980px) 100vw, 520px"
+          alt="Automating tasks with AI"
+          width="1400" height="933" loading="eager" fetchpriority="high" decoding="async"/>
+      </figure>
+    </section>
+
+    <!-- Course details -->
+    <section class="grid section">
+      <article class="card">
+        <h3>What you'll learn</h3>
+        <ul>
+          <li>Draft faster emails, reports, and documentation</li>
+          <li>Summarize meetings, notes, and articles</li>
+          <li>Create simple automations for repetitive tasks</li>
+          <li>Use safe workflows to protect data</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Who this is for</h3>
+        <ul>
+          <li>Assistants, coordinators, and CX teams</li>
+          <li>Students and job seekers</li>
+          <li>Anyone who wants to save time</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="grid section">
+      <article class="card">
+        <h3>Modules</h3>
+        <ul>
+          <li>Email & message drafts</li>
+          <li>Notes & summaries</li>
+          <li>Research helpers</li>
+          <li>Task & schedule helpers</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>You'll build</h3>
+        <ul>
+          <li>Your personal AI toolkit (prompts + templates)</li>
+          <li>One small automation you can demo in interviews</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Second image -->
+    <section class="image-row section">
+      <figure class="media" id="supportMedia">
+        <img
+          src="https://images.unsplash.com/photo-1603988363607-e1e4a66962c4?auto=format&fit=crop&w=1400&q=75"
+          srcset="
+            https://images.unsplash.com/photo-1603988363607-e1e4a66962c4?auto=format&fit=crop&w=800&q=70 800w,
+            https://images.unsplash.com/photo-1603988363607-e1e4a66962c4?auto=format&fit=crop&w=1200&q=72 1200w,
+            https://images.unsplash.com/photo-1603988363607-e1e4a66962c4?auto=format&fit=crop&w=1400&q=75 1400w"
+          sizes="(max-width: 980px) 100vw, 1000px"
+          alt="Planning tasks with AI tools"
+          width="1400" height="933" loading="lazy" decoding="async"/>
+      </figure>
+    </section>
+  </main>
+
+  <script>
+    // Remove shimmer once images decode
+    const heroWrap = document.getElementById('heroMedia');
+    const heroImg = heroWrap.querySelector('img');
+    (heroImg.decode ? heroImg.decode() : Promise.resolve()).finally(()=> heroWrap.classList.add('loaded'));
+
+    const supportWrap = document.getElementById('supportMedia');
+    if (supportWrap) {
+      const supportImg = supportWrap.querySelector('img');
+      (supportImg.decode ? supportImg.decode() : Promise.resolve()).finally(()=> supportWrap.classList.add('loaded'));
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI JobPrep — How It Works</title>
+  <!-- Preload image so it shows up fast -->
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1400&q=75">
+  <style>
+    :root{
+      --bg: #0b1020;
+      --text: #e6eefc;
+      --muted: #b8c4e6;
+      --brand: #4f7cff;
+      --brand-2: #7b5cff;
+      --line: rgba(255,255,255,.16);
+      --shadow: 0 20px 40px rgba(0,0,0,.35);
+      --radius: 12px;
+      --radius-lg: 18px;
+      --maxw: 1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui;
+      background:
+        radial-gradient(900px 420px at 10% -10%, rgba(123,92,255,.18), transparent 60%),
+        radial-gradient(700px 360px at 90% 0%, rgba(79,124,255,.16), transparent 60%),
+        var(--bg);
+      color:var(--text); line-height:1.65
+    }
+    a{color:inherit; text-decoration:none}
+
+    /* Header (same look as homepage) */
+    header{padding:16px 24px; display:flex; justify-content:space-between; align-items:center; background:rgba(10,15,33,.55); position:sticky; top:0; z-index:50; backdrop-filter: blur(8px); border-bottom:1px solid var(--line)}
+    .brand{display:flex; align-items:center; gap:10px}
+    .brand h1{font-size:20px; margin:0}
+    .cta{padding:10px 16px; background:linear-gradient(135deg, var(--brand), var(--brand-2)); border:none; border-radius:8px; font-weight:700; color:#fff; box-shadow:var(--shadow)}
+
+    main{max-width:var(--maxw); margin:auto; padding:36px 20px}
+
+    /* New layout: Centered intro, full-width image, then 2x2 step cards */
+    .intro{max-width:760px; margin:0 auto 18px; text-align:center}
+    .intro h2{font-size:2.2rem; margin:6px 0}
+    .intro p{color:var(--muted)}
+
+    .img-wrap{position:relative; border-radius:var(--radius-lg); overflow:hidden; box-shadow:var(--shadow); border:1px solid var(--line); background:linear-gradient(90deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); margin:18px auto}
+    .img-wrap img{display:block; width:100%; height:auto}
+
+    .steps{display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:22px}
+    .card{background:rgba(255,255,255,.04); border:1px solid var(--line); border-radius:12px; padding:16px}
+    .card h3{margin:4px 0 6px; font-size:1.05rem}
+    .badge{display:inline-grid; place-items:center; width:26px; height:26px; border-radius:8px; background:linear-gradient(135deg, var(--brand), var(--brand-2)); font-weight:800}
+    .card p{margin:0; color:var(--muted)}
+
+    .actions{display:flex; gap:12px; margin:26px auto 0; justify-content:center; flex-wrap:wrap}
+    .outline{background:transparent; border:1px solid var(--line)}
+
+    @media (max-width: 780px){
+      .steps{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true">
+        <defs>
+          <linearGradient id="ajpG" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0" stop-color="#4f7cff"/>
+            <stop offset="1" stop-color="#7b5cff"/>
+          </linearGradient>
+        </defs>
+        <rect rx="20" ry="20" width="100" height="100" fill="url(#ajpG)"/>
+        <path d="M70 38 L45 63 L33 51" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h1>AI JobPrep</h1>
+    </div>
+    <a class="cta" href="index.html">Home</a>
+  </header>
+
+  <main>
+    <section class="intro">
+      <span style="display:inline-block; padding:6px 10px; border:1px solid var(--line); border-radius:999px; font-family:ui-monospace,monospace; font-size:12px; background:rgba(79,124,255,.12)">HOW IT WORKS</span>
+      <h2>Learn AI. Show your skills. Get the job.</h2>
+      <p>We teach you the basics, help you practice, and guide you to build simple projects. You can share these projects with employers. No coding needed.</p>
+    </section>
+
+    <!-- One hero image that always shows -->
+    <figure class="img-wrap">
+      <img
+        src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1400&q=75"
+        srcset="
+          https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=70 800w,
+          https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=72 1200w,
+          https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1400&q=75 1400w"
+        sizes="(max-width: 900px) 100vw, 1000px"
+        alt="Student using AI tools on a laptop"
+        width="1400" height="933" loading="eager" fetchpriority="high" decoding="async" />
+    </figure>
+
+    <!-- Simple 2x2 steps with 8th‑grade vocabulary -->
+    <section class="steps">
+      <article class="card">
+        <div class="badge">1</div>
+        <h3>Set your goal</h3>
+        <p>Pick what job you want. We show you the best lessons to start with.</p>
+      </article>
+      <article class="card">
+        <div class="badge">2</div>
+        <h3>Learn the basics</h3>
+        <p>Watch short videos. Try easy tasks that teach you how AI helps you work.</p>
+      </article>
+      <article class="card">
+        <div class="badge">3</div>
+        <h3>Make small projects</h3>
+        <p>Create simple examples you can show on your resume or LinkedIn.</p>
+      </article>
+      <article class="card">
+        <div class="badge">4</div>
+        <h3>Apply with confidence</h3>
+        <p>Use our tips to write better resumes, messages, and interview answers.</p>
+      </article>
+    </section>
+
+    <div class="actions">
+      <a class="cta" href="index.html#join">Start Free</a>
+      <a class="cta outline" href="pricing.html">See Pricing</a>
+    </div>
+  </main>
+</body>
+</html>
